@@ -13,7 +13,3 @@ let div = Math.floor(a / b)
 let mod = a % b 
 
 console.log(`${sum}\n${minus}\n${multiply}\n${div}\n${mod}`)
-
-// Math.floor(5.95) => 5
-// Math.floor(5.2) => 5
-// Math.floor(-5.2) => -6
