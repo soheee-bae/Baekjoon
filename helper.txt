@@ -1,0 +1,75 @@
+한줄 입력받기 
+
+> Hello World 
+< Hello World
+
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input : process.stdin,
+  output : process.stdout
+}); // 입출력 인터페이스 객체 rl 생성
+
+rl.on('line', function(line){
+  // 입력받은 값은 line에 저장된다
+  console.log(line);
+
+  rl.close(); //close가 없으면 입력이 끝나지 않는다 / 한 줄 입력받고 종료
+}).on("close", function(){
+  // 입력이 끝난 후 수행할 코드 입력
+  process.exit();
+});
+
+====================================================
+
+여러줄 입력받기
+
+> Hello
+> World
+< [ 'Hello', 'World' ]
+
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+let input = []; // input 배열 선언
+
+rl.on('line', function(line){
+    input.push(line); // 입력받는 각 줄의 값을 input 배열에 저장
+}).on('close', function(){
+    console.log(input);
+    process.exit();
+})
+
+====================================================
+
+한 줄에 여러 값 입력받기
+
+> 1 2 3
+> 4 5 6
+> 7 8 9
+< [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ]
+
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+let input = [];
+
+rl.on('line', function(line){
+    input.push(line.split(' ').map((el) => parseInt(el))); // 문자열을 끊어 정수로 변환후 배열로 반환
+}).on('close', function(){
+    console.log(input);
+    process.exit();
+})
+
+====================================================
+
+let fs = require('fs')
+let input = fs.readFileSync('/dev/stdin').toString().trim().split("\n")
+
+let num = parseInt(input[0])
