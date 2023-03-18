@@ -1,0 +1,11 @@
+Sorting Array
+
+const sortedArray = input.sort((a, b) => { return a - b })  //small to big
+const sortedArray = input.sort((a, b) => { return b - a })  //big to small
+
+
+Math 
+
+// Math.floor(5.95) => 5
+// Math.floor(5.2) => 5
+// Math.floor(-5.2) => -6
