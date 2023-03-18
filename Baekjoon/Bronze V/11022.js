@@ -1,4 +1,4 @@
-// 빠른 A + B
+// A+B - 8
 const readline = require('readline')
  
 const rl = readline.createInterface({
@@ -13,8 +13,9 @@ rl.on('line', function (line) {
 }).on("close", function () {
     const count = parseInt(input[0])
     for (let i = 1; i <= count; i++) {
+
         let item = input[i]
-        console.log(item[0] + item[1])
+        console.log(`Case #${i}: ${item[0]} + ${item[1]} = ${item[0] + item[1]}`)
     }
     process.exit();
   });
