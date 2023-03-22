@@ -9,3 +9,5 @@ Math
 // Math.floor(5.95) => 5
 // Math.floor(5.2) => 5
 // Math.floor(-5.2) => -6
+// Math.min([array]) // get min of array
+// Math.max([array]) //  get max of array 
