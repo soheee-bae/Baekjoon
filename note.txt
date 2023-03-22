@@ -11,3 +11,8 @@ Math
 // Math.floor(-5.2) => -6
 // Math.min([array]) // get min of array
 // Math.max([array]) //  get max of array 
+
+
+Create new array 
+    const result = Array.from({ length: N }, () => 0)
+    const result = Array.from({length}, (_, i)=> i+1)
