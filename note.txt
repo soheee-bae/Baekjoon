@@ -16,3 +16,7 @@ Math
 Create new array 
     const result = Array.from({ length: N }, () => 0)
     const result = Array.from({length}, (_, i)=> i+1)
+
+Get ASCII code 
+const result = string.charCodeAt(0);
+const result = string.codePointAt(0);
