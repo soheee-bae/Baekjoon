@@ -1,4 +1,4 @@
-// 오븐 시계
+// 주사위 세게
 const readline = require('readline')
  
 const rl = readline.createInterface({
