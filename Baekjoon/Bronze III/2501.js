@@ -1,4 +1,4 @@
-//벌집
+// 약수 구하기
 
 const readline = require("readline");
 
@@ -10,19 +10,19 @@ const rl = readline.createInterface({
 let input = [];
 
 rl.on("line", function (line) {
-  input = parseInt(line);
+  input = line.split(" ");
   rl.close();
 }).on("close", function () {
-  let temp = 1;
-  let index = 1;
+  const N = parseInt(input[0]);
+  const B = parseInt(input[1]);
+  let result = [];
 
-  while (true) {
-    if (input <= temp) {
-      break;
+  for (let i = 1; i <= N; i++) {
+    if (N % i === 0) {
+      result.push(i);
     }
-    temp = temp + index * 6;
-    index++;
   }
-  console.log(index);
+
+  console.log(result[B - 1] || 0);
   process.exit();
 });
