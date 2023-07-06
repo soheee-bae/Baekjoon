@@ -30,3 +30,15 @@ rl.on("line", function (line) {
 
   process.exit();
 });
+
+// BETTER VERSION
+
+//   const sum = input.reduce((acc, cur) => acc + cur);
+
+//   if (sum !== 180) return "Error";
+
+//   const set = new Set(input);
+
+//   if (set.size === 1) return "Equilateral";
+//   if (set.size === 2) return "Isosceles";
+//   if (set.size === 3) return "Scalene";
