@@ -7,12 +7,12 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-let input = 0;
+let input;
 
 rl.on("line", function (line) {
   input = line;
   rl.close();
 }).on("close", function () {
-  console.log(sum / count);
-  //   process.exit();
+  console.log(1);
+  console.log(0);
 });
